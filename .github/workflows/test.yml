@@ -1,7 +1,10 @@
 name: My first github action 
 on: [push]
 jobs: 
-  print-hello-world: 
+  build-project: 
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "hello world!!"
+      - name: install node dependecies
+        run: npm install
+      - name: build the projejct
+        run: npm run build
